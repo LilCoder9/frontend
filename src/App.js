@@ -15,11 +15,9 @@ function App() {
   const [index, setIndex] = useState("");
 
   useEffect(() => {
-    axios
-      .get("https://numbling.up.railway.app/post_random")
-      .then(function (response) {
-        setRand(response.data);
-      });
+    axios.get("http://localhost:3001/post_random").then(function (response) {
+      setRand(response.data);
+    });
   });
 
   const [board, setBoard] = useState(boardDefault);
